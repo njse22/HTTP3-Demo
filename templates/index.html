@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTTP/3 con QUIC</title>
+        <style>
+	    body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: #f0f0f0;
+            }
+            .poster-container {
+                background-color: white;
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #5454e9;
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .information{
+                font-size: 1.8rem;
+                text-align: center;
+                color: #865cf0;
+                margin: 1rem 0;
+            }
+            
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .description {
+                text-align: center;
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                margin-top: 1.5rem;
+                line-height: 1.5;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="poster-container">
+            <div class="header">
+                <h1>HTTP/3 con QUIC</h1>
+            </div>
+
+	    <div class="information">
+		This is a test page for <a href="https://github.com/aiortc/aioquic/">aioquic</a>, 
+		a QUIC and HTTP/3 implementation written in Python.
+	    </div>
+
+	    {% if request.scope["http_version"] == "3" %}
+		<p class="description">
+		    HTTP/3 con QUIC el protocolo que busca dominar internet 
+		</p>
+	    {% endif %}
+        </div>
+    </body>
+</html>

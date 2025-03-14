@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTTP/3 con QUIC</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: #f0f0f0;
+            }
+            .poster-container {
+                background-color: white;
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #5454e9;
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .location {
+                font-size: 1.8rem;
+                text-align: center;
+                color: #865cf0;
+                margin: 1rem 0;
+            }
+            .datetime {
+                font-size: 1.4rem;
+                text-align: center;
+                color: #34495e;
+                margin: 0.5rem 0;
+            }
+            .capacity {
+                text-align: center;
+                font-weight: bold;
+                color: #c0392b;
+                margin: 1rem 0;
+            }
+            .description {
+                text-align: center;
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                margin-top: 1.5rem;
+                line-height: 1.5;
+            }
+            .highlight {
+                color: #2980b9;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="poster-container">
+            <h1>HTTP/3 con QUIC</h1>
+            
+            <div class="location">
+		This is a test page for <a href="https://github.com/aiortc/aioquic/">aioquic</a>, 
+		a QUIC and HTTP/3 implementation written in Python.
+	    </div>
+            
+            <p class="description">
+		HTTP/3 con QUIC el protocolo que busca dominar internet 
+	    </p>
+
+            {% if request.scope["http_version"] == "3" %}
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <!-- Espacio reservado para contenido específico de HTTP/3 -->
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
